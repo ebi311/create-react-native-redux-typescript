@@ -1,14 +1,23 @@
 {
-  "name": "createnodescript",
+  "name": "create-react-native-redux-typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/create-react-native-redux-typescript.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^10.5.7"
+    "fs-extra": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.4",
+    "@types/node": "^10.5.8",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "bin": {
+    "create-react-native-redux-typescript": "./bin/create-react-native-redux-typescript.cmd"
   }
 }

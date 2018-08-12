@@ -1,0 +1,35 @@
+************ Panic Occurred. ***********
+runtime error: invalid memory address or nil pointer dereference
+goroutine 1 [running]:
+runtime/debug.Stack(0x6af2c0, 0xc04229e0a0, 0xc0424c3448)
+	c:/go/src/runtime/debug/stack.go:24 +0xae
+github.com/zetamatta/nyagos/frame.PanicHandler()
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/frame/misc.go:52 +0x1b4
+panic(0x63a500, 0x7ba400)
+	c:/go/src/runtime/panic.go:502 +0x237
+fmt.Fprintf(0x0, 0x0, 0x680dd1, 0x1e, 0xc0424c36e0, 0x1, 0x1, 0xc0422b4000, 0x4f, 0x6885f0)
+	c:/go/src/fmt/print.go:189 +0x7e
+github.com/zetamatta/nyagos/shell.readEnv(0xc0424c3758, 0x0, 0x0, 0x0, 0x0, 0x4291f7)
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/shell/source.go:36 +0x411
+github.com/zetamatta/nyagos/shell.loadTmpFile(0xc0422e36c0, 0x32, 0x0, 0x0, 0x0, 0x0, 0x0)
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/shell/source.go:86 +0x17f
+github.com/zetamatta/nyagos/shell.RawSource(0xc042365680, 0x4, 0x4, 0x0, 0x0, 0x0, 0x6af300, 0xc042004010, 0x6af340, 0xc042004018, ...)
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/shell/source.go:180 +0x3bc
+github.com/zetamatta/nyagos/shell.(*Cmd).spawnvpSilent(0xc04209e210, 0x6b0260, 0xc042236090, 0xc0422ee780, 0x60, 0x260)
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/shell/interpreter.go:229 +0x343
+github.com/zetamatta/nyagos/shell.(*Cmd).Spawnvp(0xc04209e210, 0x6b0260, 0xc042236090, 0xc042364bc0, 0x4, 0x4)
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/shell/interpreter.go:269 +0x61
+github.com/zetamatta/nyagos/shell.(*Shell).Interpret(0xc04208e910, 0x6b0260, 0xc042236090, 0xc0421d1f00, 0x64, 0x0, 0x0, 0x0)
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/shell/interpreter.go:386 +0x504
+github.com/zetamatta/nyagos/shell.(*Shell).Loop(0xc04208e910, 0x6b0260, 0xc042236060, 0x6af180, 0xc042346040, 0x0, 0x0, 0x0)
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/shell/loop.go:93 +0x2a8
+github.com/zetamatta/nyagos/shell.(*Shell).ForEver(0xc04208e910, 0x6b0260, 0xc042236060, 0x6af180, 0xc042346040)
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/shell/loop.go:115 +0x6d
+github.com/zetamatta/nyagos/mains.Main(0x0, 0x0)
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/mains/nyagos.go:191 +0x6d0
+github.com/zetamatta/nyagos/frame.Start(0x687e30, 0x0, 0x0)
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/frame/misc.go:39 +0x15d
+main.main()
+	C:/Users/Hayama/go/src/github.com/zetamatta/nyagos/main.go:19 +0x62
+*** Please copy these error message ***
+*** And hit ENTER key to quit.      ***
